@@ -10,11 +10,19 @@ return {
    --These are some examples, uncomment them if you want to see them work!
   --
    {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = {"python"},
+    opts = function()
+      return require "custom.configs.null-ls"
+    end,
+   },
+   {
    	"williamboman/mason.nvim",
    	opts = {
    		ensure_installed = {
    			"lua-language-server", "stylua",
    			"html-lsp", "css-lsp" , "prettier", "pyright",
+        "mypy", "ruff",
    		},
    	},
    },
