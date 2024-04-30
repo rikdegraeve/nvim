@@ -11,7 +11,8 @@ return {
   --
    {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
+    event = "VeryLazy",
+    --ft = {"python"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -22,7 +23,7 @@ return {
    		ensure_installed = {
    			"lua-language-server", "stylua",
    			"html-lsp", "css-lsp" , "prettier", "pyright",
-        "mypy", "ruff", "black",
+        "mypy", "ruff", "black", "clangd", "clang-format",
    		},
    	},
    },
